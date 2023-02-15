@@ -9,17 +9,17 @@
     "dist",
     "index.d.ts"
   ],
-  "version": "1.0.6",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yozojo/react-split-pane-next"
+    "url": "https://github.com/HelenTim/react-split-pane-smart"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yozojo/react-split-pane-next"
+    "url": "https://github.com/HelenTim/react-split-pane-smart/issues"
   },
-  "homepage": "https://github.com/yozojo/react-split-pane-next",
-  "author": "yozjo <you1115879184@126.com>",
+  "homepage": "https://github.com/HelenTim/react-split-pane-smart",
+  "author": "HeLenTim <3427439707@qq.com>",
   "keywords": [
     "react",
     "react-component",
