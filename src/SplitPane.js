@@ -84,7 +84,7 @@ class SplitPane extends PureComponent {
 
   componentDidUpdate(prep, pres, beforeUpdatePaneSize) {
     const paneize = this.paneElements[0].getBoundingClientRect()[this.sizeProp];
-    if (Math.abs(paneize - beforeUpdatePaneSize) > 0.1) {
+    if (Math.abs(paneize - beforeUpdatePaneSize) > 0.1 && this.move) {
       this.props.onChange?.([
         paneize,
         this.paneElements[1].getBoundingClientRect()[this.sizeProp],
