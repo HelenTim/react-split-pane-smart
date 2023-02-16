@@ -32,18 +32,19 @@ import SplitPane, { Pane } from 'react-split-pane-smart';
 
 **SplitPane 可选属性有：**
 
-| 可选属性         | 作用                               | 属性类型                          | 默认值                 |
-| ---------------- | ---------------------------------- | --------------------------------- | ---------------------- |
-| onDrag           | 拖动分割线时回调                   | (event: React.MouseEvent) => void | undefined              |
-| resizerClassName | 分割线class                        | string                            | ‘’                     |
-| resizerChildNode | 分割线子元素                       | React.ReactNode                   | null                   |
-| resizerMouseOver | 分割线鼠标悬浮时回调函数           | (event: MouseEvent) => void       | undefined              |
-| onResizeEnd      | 鼠标抬起时会触发，返回两个面板大小 | (value: [,number]) => void        | undefined              |
-| onResizeStart    | 鼠标在分割线按下时会触发           | (event: MouseEvent) => void       | undefined              |
-| onChange         | 布局发生变化时会调用               | (value: [number,number]) => void  | undefined              |
-| className        | 类名                               | string                            | undefined              |
-| split            | 排布方式                           | string                            | vertical \| horizontal |
-| resizerSize      | 分割线宽度：计算元素大小时会用到   | number                            | 1                      |
+| 可选属性         | 作用                                           | 属性类型                          | 默认值                 |
+| ---------------- | ---------------------------------------------- | --------------------------------- | ---------------------- |
+| onDrag           | 拖动分割线时回调                               | (event: React.MouseEvent) => void | undefined              |
+| resizerClassName | 分割线class                                    | string                            | ‘’                     |
+| resizerChildNode | 分割线子元素                                   | React.ReactNode                   | null                   |
+| resizerMouseOver | 分割线鼠标悬浮时回调函数                       | (event: MouseEvent) => void       | undefined              |
+| onResizeEnd      | 鼠标抬起时会触发，返回两个面板大小             | (value: [,number]) => void        | undefined              |
+| onResizeStart    | 鼠标在分割线按下时会触发                       | (event: MouseEvent) => void       | undefined              |
+| onChange         | 布局发生变化时会调用                           | (value: [number,number]) => void  | undefined              |
+| className        | 类名                                           | string                            | undefined              |
+| split            | 排布方式                                       | string                            | vertical \| horizontal |
+| resizerSize      | 分割线宽度：计算元素大小时会用到               | number                            | 1                      |
+| needExactSizes   | 是否需要返回精确的地面板大小。关闭有利于性能。 | [string,string]                   | false                  |
 
 
 

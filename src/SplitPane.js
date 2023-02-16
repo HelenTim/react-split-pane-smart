@@ -83,12 +83,20 @@ class SplitPane extends PureComponent {
   }
 
   componentDidUpdate(prep, pres, beforeUpdatePaneSize) {
-    const paneize = this.paneElements[0].getBoundingClientRect()[this.sizeProp];
-    if (Math.abs(paneize - beforeUpdatePaneSize) > 0.1 && this.move) {
-      this.props.onChange?.([
-        paneize,
-        this.paneElements[1].getBoundingClientRect()[this.sizeProp],
-      ]);
+    if (this.props.needExactSizes && this.move) {
+      const paneize = this.paneElements[0].getBoundingClientRect()[
+        this.sizeProp
+      ];
+      if (Math.abs(paneize - beforeUpdatePaneSize) > 0.1) {
+        this.props.onChange?.([
+          paneize,
+          this.paneElements[1].getBoundingClientRect()[this.sizeProp],
+        ]);
+      }
+    }
+    
+    if (!this.props.needExactSizes && this.move) {
+      this.props.onChange?.(this.sizes);
     }
   }
 
@@ -430,6 +438,7 @@ SplitPane.propTypes = {
   resizerClassName: PropTypes.string,
   resizerMouseOver: PropTypes.func,
   onDrag: PropTypes.func,
+  needExactSizes: PropTypes.bool,
 };
 
 SplitPane.defaultProps = {
@@ -438,6 +447,7 @@ SplitPane.defaultProps = {
   allowResize: true,
   resizerClassName: '',
   resizerChildNode: <></>,
+  needExactSizes: false,
 };
 
 export default SplitPane;
